@@ -1,0 +1,195 @@
+<div class="container">
+
+  <!-- Header
+  ============================================= -->
+  <header id="header" class="transparent-header">
+    <div id="header-wrap">
+      <div class="container clearfix">
+
+        <div id="primary-menu-trigger">
+          <i class="fa fa-reorder"></i>
+        </div>
+
+        <!-- Logo
+        ============================================= -->
+        <div id="logo">
+          <a href="#/" class="standard-logo" data-dark-logo="../../../assets/images/logo/LOGO2-2x.png"><img src="../../../assets/images/logo/LOGO2-2x.png" height="100" width="240" alt="INASEL Logo"></a>
+          <a href="#/" class="retina-logo" data-dark-logo="../../../assets/images/logo/LOGO2-2x.png"><img src="../../../assets/images/logo/LOGO2-2x.png" alt="INASEL Logo"></a>
+        </div><!-- #logo end -->
+
+        <nav id="primary-menu">
+          <ul>
+            <li><a href="#/"><div>Inicio</div></a></li>
+            <li><a><div>Empresa</div></a>
+              <div class="mega-menu-content style-6 col-1 clearfix">
+                <ul class="md-4 dropdown-menu">
+                  <li><a href="#/nosotros"><div>Acerca de Nosotros</div></a></li>
+                  <li><a href="#/certificaciones"><div>Ceritficaciones</div></a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#/proyectos"><div>Proyectos</div></a></li>
+            <li><a href="#/servicios"><div>Servicios</div></a></li>
+            <li><a href="#/productos"><div>Productos</div></a></li>
+            <li><a href="#/noticias"><div>Noticias</div></a></li>
+            <li class="current"><a href="#/contacto"><div>Contacto</div></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header> <!-- #header end -->
+
+  <div class="clear"></div>
+
+  <!-- Page Title
+  ============================================= -->
+  <section id="page-title">
+
+      <div class="container clearfix">
+          <h1>Contacto</h1>
+          <span>Descripcion de contacto</span>
+      </div>
+
+  </section><!-- #page-title end -->
+
+  <!-- Google Map
+  ============================================= -->
+  <div class="topmargin-sm nobottommargin">
+
+    <section id="google-map" class="gmap slider-parallax">
+      <ng-map center="[-0.1869, -78.4928]" zoom-to-inlude-markers="true" zoom="17" scrollwheel="false" style="display:block; height:450px;">
+        <marker position="[-0.1869, -78.4928]" draggable="false"></marker>
+      </ng-map>
+    </section>
+    
+  </div>
+  
+
+  <!-- Content
+  ============================================= -->
+  <section id="content">
+
+    <div class="content-wrap">
+
+      <div class="container clearfix">
+
+        <!-- Postcontent
+        ============================================= -->
+        <div class="postcontent nobottommargin">
+
+          <h3>Envíanos un Mensaje</h3>
+
+          <div id="contact-form-result" data-notify-type="success" data-notify-msg="<i class=icon-ok-sign></i> Message Sent Successfully!"></div>
+
+          <form class="nobottommargin" id="template-contactform" name="template-contactform" action="include/sendemail.php" method="post">
+
+            <div class="form-process"></div>
+
+            <div class="col_one_third">
+              <label for="template-contactform-name">Nombre <small>*</small></label>
+              <input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="sm-form-control required" />
+            </div>
+
+            <div class="col_one_third">
+              <label for="template-contactform-email">Email <small>*</small></label>
+              <input type="email" id="template-contactform-email" name="template-contactform-email" value="" class="required email sm-form-control" />
+            </div>
+
+            <div class="col_one_third col_last">
+              <label for="template-contactform-phone">Teléfono</label>
+              <input type="text" id="template-contactform-phone" name="template-contactform-phone" value="" class="sm-form-control" />
+            </div>
+
+            <div class="clear"></div>
+
+            <div class="col_two_third">
+              <label for="template-contactform-subject">TITULO <small>*</small></label>
+              <input type="text" id="template-contactform-subject" name="template-contactform-subject" value="" class="required sm-form-control" />
+            </div>
+
+            <!-- <div class="col_one_third col_last">
+              <label for="template-contactform-service">Servicios</label>
+              <select id="template-contactform-service" name="template-contactform-service" class="sm-form-control">
+                <option value="">-- Seleccione Uno --</option>
+                <option value="Wordpress">Servicio 1</option>
+                <option value="PHP / MySQL">Servicio 2</option>
+                <option value="HTML5 / CSS3">Servicio 3</option>
+                <option value="Graphic Design">Servicio 4</option>
+              </select>
+            </div> -->
+
+            <div class="clear"></div>
+
+            <div class="col_full">
+              <label for="template-contactform-message">Mensaje <small>*</small></label>
+              <textarea class="required sm-form-control" id="template-contactform-message" name="template-contactform-message" rows="6" cols="30"></textarea>
+            </div>
+
+            <div class="col_full hidden">
+              <input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="sm-form-control" />
+            </div>
+
+            <div class="col_full">
+              <button class="button button-3d nomargin" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit">ENVIAR MENSAJE</button>
+            </div>
+
+          </form>
+
+          <!-- <script type="text/javascript">
+
+            $("#template-contactform").validate({
+              submitHandler: function(form) {
+                $('.form-process').fadeIn();
+                $(form).ajaxSubmit({
+                  target: '#contact-form-result',
+                  success: function() {
+                    $('.form-process').fadeOut();
+                    $(form).find('.sm-form-control').val('');
+                    $('#contact-form-result').attr('data-notify-msg', $('#contact-form-result').html()).html('');
+                    SEMICOLON.widget.notifications($('#contact-form-result'));
+                  }
+                });
+              }
+            });
+
+          </script> -->
+
+        </div><!-- .postcontent end -->
+
+        <!-- Sidebar
+        ============================================= -->
+        <div class="sidebar col_last">
+
+          <address>
+            <strong>Oficinas:</strong><br>
+            Jorge Juan N32-24 y Mariana de Jesus<br>
+            Quito - Ecuador<br>
+          </address>
+          <abbr title="Phone Number"><strong>Telefono:</strong></abbr> (593) 22504423 / 22565487<br>
+          <abbr title="Fax"><strong>Fax:</strong></abbr> (593) 22905464<br>
+          <abbr title="Email Address"><strong>Email:</strong></abbr> inasel@inaselecuador.com
+
+          <div class="widget noborder notoppadding">
+
+            <a href="https://www.facebook.com/Inasel-Ecuador-759257844196776/" class="social-icon si-small si-dark si-facebook">
+              <i class="fa fa-facebook fa-2x"></i>
+              <i class="fa fa-facebook fa-2x"></i>
+            </a>
+
+            <a href="https://www.youtube.com/channel/UCFyFWrsODBp7BcJEt8Y06kQ" class="social-icon si-small si-dark si-youtube">
+              <i class="fa fa-youtube fa-2x"></i>
+              <i class="fa fa-youtube fa-2x"></i>
+            </a>
+
+          </div>
+
+        </div><!-- .sidebar end -->
+
+      </div>
+
+    </div>
+
+  </section><!-- #content end -->
+
+</div>
+<!-- <inasel-footer></inasel-footer> -->

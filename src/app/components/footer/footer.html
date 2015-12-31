@@ -1,0 +1,206 @@
+<!-- Footer
+============================================= -->
+<footer id="footer" class="dark">
+
+    <div class="container">
+
+        <!-- Footer Widgets
+        ============================================= -->
+        <div class="footer-widgets-wrap clearfix">
+
+            <div class="row">
+                
+                <div class="col-md-5">
+
+                    <div class="widget clearfix">
+
+                        <img src="../../../assets/images/logo/LOGO2-FOOTER.png" alt="" class="footer-logo">
+
+                        <h3><strong>Automatizando</strong> al país del mañana.</h3>
+
+                        <div class="clearfix" style="padding: 10px 0;">
+                            <div class="col-md-12">
+                                <address class="nobottommargin">
+                                    <i class="fa fa-map-marker fa-lg fa-fw"></i>
+                                    Jorge Juan XXX y Mariana de Jesús<br>
+                                </address>
+                                <i class="fa fa-phone-square fa-lg fa-fw"></i> (593) 8547 632521<br>
+                                <i class="fa fa-envelope fa-lg fa-fw"></i> info@inaselecuador.com
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-7">
+        			<div class="row">
+		                <div class="col-md-6">
+
+		                    <div class="widget clearfix">
+		                        <h4>Noticias Recientes</h4>
+
+		                        <div id="post-list-footer">
+		                            <div class="spost clearfix">
+		                                <div class="entry-image hidden-sm">
+		                                    <a href="#"><img class="img-circle" src="../../../assets/images/100x100.jpg" alt=""></a>
+		                                </div>
+		                                <div class="entry-c">
+		                                    <div class="entry-title">
+		                                        <h4><a href="#">Noticia 1</a></h4>
+		                                    </div>
+		                                    <ul class="entry-meta">
+		                                        <li>10th July 2015</li>
+		                                    </ul>
+		                                </div>
+		                            </div>
+
+		                            <div class="spost clearfix">
+		                                <div class="entry-image hidden-sm">
+		                                    <a href="#"><img class="img-circle" src="../../../assets/images/100x100.jpg" alt=""></a>
+		                                </div>
+		                                <div class="entry-c">
+		                                    <div class="entry-title">
+		                                        <h4><a href="#">Noticia 2</a></h4>
+		                                    </div>
+		                                    <ul class="entry-meta">
+		                                        <li>10th July 2015</li>
+		                                    </ul>
+		                                </div>
+		                            </div>
+
+		                        </div>
+
+		                    </div>
+
+		                </div>
+
+		                <div class="col-md-6">
+
+		                    <div class="widget quick-contact-widget clearfix">
+
+		                        <h4>SUSCRÍBETE</h4>
+
+		                        <div id="quick-contact-form-result" data-notify-type="success" data-notify-msg="<i class=icon-ok-sign></i> Message Sent Successfully!"></div>
+
+		                        <form id="quick-contact-form" name="quick-contact-form" action="include/quickcontact.php" method="post" class="quick-contact-form nobottommargin">
+
+		                            <div class="form-process"></div>
+
+		                            <div class="input-group divcenter">
+		                                <span class="input-group-addon"><i class="icon-user"></i></span>
+		                                <input type="text" class="required form-control input-block-level" id="quick-contact-form-name" name="quick-contact-form-name" value="" placeholder="Nombre Completo" />
+		                            </div>
+		                            <div class="input-group divcenter">
+		                                <span class="input-group-addon"><i class="icon-email2"></i></span>
+		                                <input type="text" class="required form-control email input-block-level" id="quick-contact-form-email" name="quick-contact-form-email" value="" placeholder="Correo Electronico" />
+		                            </div>
+		                            <textarea class="required form-control input-block-level short-textarea" id="quick-contact-form-message" name="quick-contact-form-message" rows="4" cols="30" placeholder="Aprende acerca de nuestras mejoras prácticas, nuevas soluciones y ofertas"></textarea>
+		                            <input type="text" class="hidden" id="quick-contact-form-botcheck" name="quick-contact-form-botcheck" value="" />
+
+		                      
+		                            <button type="submit" id="quick-contact-form-submit" name="quick-contact-form-submit" class="btn btn-danger nomargin" value="submit">OK</button>
+		                            
+		                            
+
+		                        </form>
+
+		                        <script type="text/javascript">
+
+		                            $("#quick-contact-form").validate({
+		                                submitHandler: function(form) {
+		                                    $(form).animate({ opacity: 0.4 });
+		                                    $(form).find('.form-process').fadeIn();
+		                                    $(form).ajaxSubmit({
+		                                        target: '#quick-contact-form-result',
+		                                        success: function() {
+		                                            $(form).animate({ opacity: 1 });
+		                                            $(form).find('.form-process').fadeOut();
+		                                            $(form).find('.form-control').val('');
+		                                            $('#quick-contact-form-result').attr('data-notify-msg', $('#quick-contact-form-result').html()).html('');
+		                                            SEMICOLON.widget.notifications($('#quick-contact-form-result'));
+		                                        }
+		                                    });
+		                                }
+		                            });
+
+		                        </script>
+
+		                    </div>
+		                </div>
+	                </div>
+	                <div class="clear"></div>
+	                <div class="row topmargin">
+	                	<div class="col-md-12">
+	                		<div class="widget clearfix">
+
+		                        <h4>SÍGUENOS EN</h4>
+
+		                        <a href="#" class="social-icon si-rounded si-facebook">
+		                            <i class="fa fa-facebook fa-2x"></i>
+		                            <i class="fa fa-facebook fa-2x"></i>
+		                        </a>
+
+		                        <a href="#" class="social-icon si-rounded si-twitter">
+		                            <i class="fa fa-twitter fa-2x"></i>
+		                            <i class="fa fa-twitter fa-2x"></i>
+		                        </a>
+
+		                        <a href="#" class="social-icon si-rounded si-gplus">
+		                            <i class="fa fa-google-plus fa-2x"></i>
+		                            <i class="fa fa-google-plus fa-2x"></i>
+		                        </a>
+
+		                        <a href="#" class="social-icon si-rounded si-pinterest">
+		                            <i class="fa fa-pinterest fa-2x"></i>
+		                            <i class="fa fa-pinterest fa-2x"></i>
+		                        </a>
+
+		                        <a href="#" class="social-icon si-rounded si-vimeo">
+		                            <i class="fa fa-vimeo fa-2x"></i>
+		                            <i class="fa fa-vimeo fa-2x"></i>
+		                        </a>
+
+		                        <a href="#" class="social-icon si-rounded si-github">
+		                            <i class="fa fa-github fa-2x"></i>
+		                            <i class="fa fa-github fa-2x"></i>
+		                        </a>
+
+		                        <a href="#" class="social-icon si-rounded si-yahoo">
+		                            <i class="fa fa-yahoo fa-2x"></i>
+		                            <i class="fa fa-yahoo fa-2x"></i>
+		                        </a>
+
+		                        <a href="#" class="social-icon si-rounded si-linkedin">
+		                            <i class="fa fa-linkedin fa-2x"></i>
+		                            <i class="fa fa-linkedin fa-2x"></i>
+		                        </a>
+		                    </div>
+	                	</div>
+	                </div>
+                </div>
+
+            </div>
+
+        </div><!-- .footer-widgets-wrap end -->
+
+    </div>
+
+    <!-- Copyrights
+    ============================================= -->
+    <div id="copyrights">
+
+        <div class="container clearfix">
+
+            <div class="col-md-12 nobottommargin center">
+                <div class="copyrights-menu copyright-links clearfix">
+                    <a href="#/">Inicio</a>/<a href="#/empresa">Empresa</a>/<a href="#/proyectos">Proyectos</a>/<a href="#/servicios">Servicios</a>/<a href="#/productos">Productos</a>/<a href="#/descargas">Descargas</a>/<a href="#/noticias">Noticias</a>/<a href="#/contacto">Contacto</a>
+                </div>
+                Todos los derechos reservados &copy; 2015 All Rights Reserved by GuaytamboSoft.
+            </div>
+
+        </div>
+
+    </div><!-- #copyrights end -->
+
+</footer><!-- #footer end -->

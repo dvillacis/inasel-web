@@ -1,0 +1,65 @@
+# version: 3
+runtime: python27
+api_version: 1
+threadsafe: true
+
+skip_files:
+
+- src/.*
+- node_modules/.*
+- bower_components/.*
+# - ^(.*/)?.*\.py[co]$
+
+handlers:
+
+- url: /favicon\.ico
+  static_files: favicon.ico
+  upload: favicon\.ico
+
+- url: /manifest\.json
+  static_files: dist/manifest.json
+  upload: dist/manifest.json
+  application_readable: true
+
+- url: /robots\.txt
+  static_files: dist/robots.txt
+  upload: dist/robots.txt
+  application_readable: true
+
+- url: /
+  static_files: dist/index.html
+  upload: dist/index.html
+  application_readable: true
+
+- url: /assets
+  static_dir: dist/assets
+  application_readable: true
+
+- url: /fonts
+  static_dir: dist/fonts
+  application_readable: true
+
+- url: /maps
+  static_dir: dist/maps
+  application_readable: true
+
+- url: /scripts
+  static_dir: dist/scripts
+  application_readable: true
+
+- url: /styles
+  static_dir: dist/styles
+  application_readable: true
+
+- url: /_ah/spi/.*
+  script: inaselBackend.APPLICATION
+
+libraries:
+- name: webapp2
+  version: latest
+- name: jinja2
+  version: latest
+- name: endpoints
+  version: 1.0
+- name: ssl
+  version: latest
