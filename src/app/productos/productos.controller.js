@@ -13,6 +13,9 @@
     angular.element(document).ready( SEMICOLON.documentOnReady.init() );
     angular.element(window).load( SEMICOLON.documentOnLoad.init() );
 
+    // Mostrar la lista de precios
+    
+
     // Get all the products from backend
     GApi.execute('inaselBackend','inaselbackend.listarProductos').then( function(resp) {
         $scope.lista = resp.items;
