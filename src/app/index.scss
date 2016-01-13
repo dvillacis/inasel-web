@@ -56,7 +56,7 @@ body {
 	line-height: 1.5;
 	color: #555;
 	font-family: 'Lato', sans-serif;
-	background-color: #ece4b5;
+	background-color: #fffbdf;
 }
 
 a {
@@ -433,7 +433,7 @@ span.middot {
 	position: relative;
 	margin: 60px 0;
 	padding: 60px 0;
-	background-color: #FFFADF;
+	background-color: #FFFDF2;
 	overflow: hidden;
 }
 
@@ -898,8 +898,8 @@ html[xmlns] .slider-wrap {display: block;}
 
 #header {
 	position: relative;
-	background-color: #ece4b5;
-	border-bottom: 1px solid #ece4b5;
+	background-color: #fffbdf;
+	border-bottom: 1px solid #fffbdf;
 }
 
 #header .container { position: relative; }
@@ -1968,7 +1968,7 @@ body.top-search-open #side-panel-trigger { opacity: 0; }
 	top: 0;
 	left: 0;
 	width: 100%;
-	background-color: #ece4b5;
+	background-color: #fffbdf;
 	box-shadow: 0 0 10px rgba(0,0,0,0.1);
 	-webkit-backface-visibility: hidden;
 }
@@ -3176,8 +3176,8 @@ body.side-panel-open:not(.device-xxs):not(.device-xs):not(.device-sm) .body-over
 #page-title {
 	position: relative;
 	padding: 50px 0;
-	background-color: #FFFADF;
-	border-bottom: 1px solid #FFFADF;
+	background-color: #FFFDF2;
+	border-bottom: 1px solid #FFFDF2;
 }
 
 #page-title .container { position: relative; }
@@ -3360,7 +3360,7 @@ body.stretched .container-fullwidth .breadcrumb { right: 60px !important; }
 #content {
 	position: relative;
 	overflow: hidden;
-	background-color: #ece4b5;
+	background-color: #fffbdf;
 }
 
 #content p { line-height: 1.8; }
@@ -4970,7 +4970,7 @@ body.device-touch.device-xxs .portfolio-notitle .portfolio-overlay { display: no
 	font-size: 13px;
 	line-height: 14px;
 	margin: 0 10px 15px 0;
-	color: #CCC;
+	color: #888;
 	font-family: 'Crete Round', serif;
 	font-style: italic;
 }
@@ -8308,7 +8308,7 @@ body:not(.device-touch) .on-hover.i-overlay {
 
 .si-dark {
 	background-color: #555;
-	color: #ece4b5 !important;
+	color: #fffbdf !important;
 	border-color: transparent;
 }
 
@@ -10891,7 +10891,7 @@ label.error { display: none !important; }
 .fancy-title h6 {
 	position: relative;
 	display: inline-block;
-	background-color: #ece4b5;
+	background-color: #fffbdf;
 	padding-right: 15px;
 	margin-bottom: 0;
 }
@@ -11550,7 +11550,7 @@ button.toast-close-button {
 
 #footer {
 	position: relative;
-	background-color: #A89C52;
+	background-color: #ECE8B3;
 	border-top: 5px solid rgba(0,0,0,0.2);
 }
 
@@ -11599,7 +11599,7 @@ button.toast-close-button {
 
 #copyrights {
 	padding: 40px 0;
-	background-color: #ECE4B5;
+	background-color: #fffbdf;
 	font-size: 14px;
 	line-height: 1.8;
 }
@@ -13772,8 +13772,8 @@ body:not(.no-transition) #wrapper,
 
 	#header.transparent-header,
 	#header.semi-transparent {
-		background: #ece4b5;
-		border-bottom: 1px solid #ece4b5;
+		background: #fffbdf;
+		border-bottom: 1px solid #fffbdf;
 		z-index: auto;
 	}
 
