@@ -104,7 +104,7 @@
 
       <!-- Portfolio Items
       ============================================= -->
-      <div id="portfolio" class="portfolio-masonry topmargin-sm clearfix">
+      <div id="portfolio" class="portfolio-3 clearfix">
 
         <article class="portfolio-item {{item.categoria}} animated fadeInUp" ng-repeat="item in lista">
           <div class="portfolio-image">
@@ -117,8 +117,8 @@
             </div>
           </div>
           <div class="portfolio-desc">
-            <h3><a href="portfolio-single.html">{{item.titulo}}</a></h3>
-            <span><a href="#">{{item.categoria}}</a></span>
+            <h3><a href="#/proyectos/{{item.idProyecto}}">{{item.titulo}}</a></h3>
+            <span><a>{{item.categoria}}</a></span>
           </div>
         </article>
       </div>

@@ -140,7 +140,7 @@
           <div class="clear"></div>
             
           
-          <div id="portfolio" class="portfolio-masonry topmargin-sm clearfix">
+          <div id="portfolio" class="portfolio-4 topmargin-sm clearfix">
             <article class="portfolio-item pf-media pf-icons animated fadeInLeft" ng-repeat="x in listaProyectos">
               <div class="portfolio-image">
                 <a href="portfolio-single.html">
@@ -152,7 +152,7 @@
                 </div>
               </div>
               <div class="portfolio-desc">
-                <h3><a href="portfolio-single.html">{{x.titulo}}</a></h3>
+                <h3><a href="#/proyectos/{{x.idProyecto}}">{{x.titulo}}</a></h3>
                 <span><a href="#">{{x.categoria}}</a></span>
               </div>
             </article>
@@ -172,7 +172,7 @@
           <!-- <span>Estos son nuestros proyectos más recientes</span> -->
         </div>
         <div class="clear"></div>
-        <div id="portfolio" class="portfolio-masonry topmargin-sm clearfix">
+        <div id="portfolio" class="portfolio-4 topmargin-sm clearfix">
 
           <article class="portfolio-item pf-media pf-icons animated fadeInLeft" ng-repeat="x in listaProductos">
             <div class="portfolio-image">
@@ -185,7 +185,7 @@
               </div>
             </div>
             <div class="portfolio-desc">
-              <h3><a href="portfolio-single.html">{{x.titulo}}</a></h3>
+              <h3><a href="#/productos/{{x.idProducto}}">{{x.titulo}}</a></h3>
               <span><a href="#">{{x.categoria}}</a></span>
             </div>
           </article>

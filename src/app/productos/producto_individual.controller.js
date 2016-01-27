@@ -19,7 +19,8 @@
     // Get the product from backend
     GApi.execute('inaselBackend','inaselbackend.listarProductos',{id: $stateParams.id}).then( function(resp) {
         $scope.producto = resp.items[0];
-        console.log(resp.items);
+        //console.log($scope.producto.descripcion_larga);
+        jQuery('div.contenido').html($scope.proyecto.descripcion_larga);
     });
 
     // Get all the news from backend
