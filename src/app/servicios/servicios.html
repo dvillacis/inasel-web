@@ -204,16 +204,20 @@
 
                         <img src="../../../assets/images/logo/LOGO2-FOOTER.png" alt="" class="footer-logo">
 
-                        <h3><strong>Automatizando</strong> al país del futuro.</h3>
+                        <h3>"<strong>Automatizando</strong> al país del futuro"</h3>
 
                         <div class="clearfix" style="padding: 10px 0;">
                             <div class="col-md-12">
-                                <address class="nobottommargin">
-                                    <i class="fa fa-map-marker fa-lg fa-fw"></i>
-                                    Jorge Juan N32-24 y Mariana de Jesús<br>
-                                </address>
-                                <i class="fa fa-phone-square fa-lg fa-fw"></i> (593) 22504423<br>
-                                <i class="fa fa-envelope fa-lg fa-fw"></i> inasel@inaselecuador.com
+                                <div class="row">
+                                  <div class="col-md-1"><i class="fa fa-map-marker fa-lg fa-fw"></i></div><div class="col-md-8"><p>Jorge Juan N32-24 y Mariana de Jesús</p></div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-md-1"><i class="fa fa-phone-square fa-lg fa-fw"></i></div><div class="col-md-8"><p>(593) 22504423</p></div>
+                                </div>
+                                <div class="row">
+                                  <div class="col-md-1"><i class="fa fa-envelope fa-lg fa-fw"></i></div><div class="col-md-8"><p>inasel@inaselecuador.com</p></div>
+                                </div>
+                                
                             </div>
                         </div>
 
@@ -235,7 +239,7 @@
                                     </div> -->
                                     <div class="entry-c">
                                         <div class="entry-title">
-                                            <h4><a href="#">{{noticia.titulo}}</a></h4>
+                                            <h4><a href="#/noticias">{{noticia.titulo}}</a></h4>
                                         </div>
                                         <ul class="entry-meta">
                                             <li>{{noticia.fecha}}</li>
@@ -247,26 +251,37 @@
 
                         </div>
 
-
-                        <div class="widget clearfix">
+                        <div class="widget clearfix col-md-6">
 
                             <h4>SÍGUENOS EN</h4>
 
-                            <a href="https://www.facebook.com/Inasel-Ecuador-759257844196776/" class="social-icon si-rounded si-facebook">
+                            <a href="https://www.facebook.com/Inasel-Ecuador-759257844196776/" target="_blank" class="social-icon si-rounded si-facebook">
                                 <i class="fa fa-facebook"></i>
                                 <i class="fa fa-facebook"></i>
                             </a>
 
-                            <a href="https://www.youtube.com/channel/UCFyFWrsODBp7BcJEt8Y06kQ" class="social-icon si-rounded si-youtube">
+                            <a href="https://www.youtube.com/channel/UCFyFWrsODBp7BcJEt8Y06kQ" target="_blank" class="social-icon si-rounded si-youtube">
                                 <i class="fa fa-youtube"></i>
                                 <i class="fa fa-youtube"></i>
+                            </a>
+                        </div>
+
+                        <div class="widget clearfix col-md-6">
+                          <h4>NUESTRO APP</h4>
+                            <a href="https://itunes.apple.com/ec/app/inasel/id1070152271" target="_blank" class="social-icon si-rounded">
+                                <i class="fa fa-apple"></i>
+                                <i class="fa fa-apple"></i>
+                            </a>
+                            <a href="https://play.google.com/store/apps/details?id=com.easyeasyapps.framework.a4679151046885376.inasel" target="_blank" class="social-icon si-rounded">
+                                <i class="fa fa-android"></i>
+                                <i class="fa fa-android"></i>
                             </a>
                         </div>
                       
 
                     </div>
 
-                    <div class="col-md-6">
+                    <div class="col-md-5">
 
                         <div class="widget quick-contact-widget clearfix">
 
@@ -290,7 +305,7 @@
                                 <input type="text" class="hidden" id="quick-contact-form-botcheck" name="quick-contact-form-botcheck" value="" />
 
                           
-                                <button type="submit" id="quick-contact-form-submit" name="quick-contact-form-submit" class="btn btn-danger nomargin" value="submit">OK</button>
+                                <button type="submit" id="quick-contact-form-submit" name="quick-contact-form-submit" class="btn nomargin" value="submit">OK</button>
                                 
                                 
 
@@ -317,7 +332,7 @@
                 <div class="copyrights-menu copyright-links clearfix">
                     <a href="#/">Inicio</a>/<a href="#/empresa">Empresa</a>/<a href="#/proyectos">Proyectos</a>/<a href="#/servicios">Servicios</a>/<a href="#/productos">Productos</a>/<a href="#/noticias">Noticias</a>/<a href="#/contacto">Contacto</a>
                 </div>
-                Todos los derechos reservados &copy; 2015 All Rights Reserved by GuaytamboSoft.
+                <p class="rights-footer">Todos los derechos reservados &copy; 2015 All Rights Reserved by GuaytamboSoft.</p>
             </div>
 
         </div>

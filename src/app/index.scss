@@ -4812,7 +4812,7 @@ body.device-touch.device-xxs .portfolio-notitle .portfolio-overlay { display: no
 
 .portfolio-meta li {
 	margin: 10px 0;
-	color: #AAA;
+	color: #021638;
 }
 
 .portfolio-meta li:first-child { margin-top: 0; }
@@ -4821,7 +4821,7 @@ body.device-touch.device-xxs .portfolio-notitle .portfolio-overlay { display: no
 	display: inline-block;
 	width: 150px;
 	font-weight: bold;
-	color: #555;
+	color: #021638;
 }
 
 .portfolio-meta li span i {
@@ -4870,7 +4870,7 @@ body.device-touch.device-xxs .portfolio-notitle .portfolio-overlay { display: no
 	width: 24px;
 	height: 24px;
 	text-align: center;
-	color: #555;
+	color: #c1c0c0;
 	transition: color .3s linear;
 	-webkit-transition: color .3s linear;
 	-o-transition: color .3s linear;
@@ -4882,7 +4882,7 @@ body.device-touch.device-xxs .portfolio-notitle .portfolio-overlay { display: no
 
 #portfolio-navigation a i {
 	position: relative;
-	top: -1px;
+	top: -4px;
 	font-size: 24px;
 	line-height: 1;
 }
@@ -8579,6 +8579,7 @@ body:not(.device-touch) .social-icon i {
 .si-colored.si-pinterest { background-color: #C8232C !important; }
 .si-fivehundredpx:hover,
 .si-colored.si-fivehundredpx { background-color: #111 !important; }
+.si-inasel:hover { background-color: #427236 !important;}
 
 
 /* Social Icons Text Color
@@ -10230,6 +10231,7 @@ body:not(.device-touch) .rounded-skill {
 	position:relative;
 	min-height:1px;
 	float:left;
+	padding-left: 50px;
 	-webkit-backface-visibility:hidden;
 	-webkit-tap-highlight-color:transparent;
 	-webkit-touch-callout:none;
@@ -11649,8 +11651,8 @@ button.toast-close-button {
 .copyright-links a {
 	display: inline-block;
 	margin: 0 3px;
-	color: #555;
-	border-bottom: 1px dotted #555;
+	color: #021638;
+	border-bottom: 1px dotted #021638;
 }
 
 .copyright-links a:hover {
