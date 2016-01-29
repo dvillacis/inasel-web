@@ -51,12 +51,16 @@ dl, dt, dd, ol, ul, li {
 	Typography
 -----------------------------------------------------------------*/
 
+@font-face {
+	font-family: 'din-regular';
+	src: url('../assets/fonts/DIN/DINNextLTPro-Regular.otf')
+}
 
 body {
 	line-height: 1.5;
-	color: #555;
-	font-family: 'Lato', sans-serif;
-	background-color: #fffbdf;
+	color: #021638;
+	font-family: din-regular, sand-serif;
+	background-color: #e2e2e2;
 }
 
 a {
@@ -84,11 +88,11 @@ h3,
 h4,
 h5,
 h6 {
-	color: #555;
+	color: #021638;
 	font-weight: 600;
 	line-height: 1.5;
 	margin: 0 0 30px 0;
-	font-family: 'Raleway', sans-serif;
+	font-family: din-regular, sans-serif;
 }
 
 h5,
@@ -130,7 +134,11 @@ table,
 fieldset,
 form { margin-bottom: 30px; }
 
-small { font-family: 'Lato', sans-serif; }
+address {
+	color: #c1c0c0;
+}
+
+small { font-family: din-regular, sans-serif; }
 
 .uppercase { text-transform: uppercase !important; }
 
@@ -171,7 +179,7 @@ small { font-family: 'Lato', sans-serif; }
 	clear: both;
 	position: relative;
 	width: 100%;
-	margin: 60px 0;
+	margin: 0px 0;
 	border-top: 1px solid #EEE;
 }
 
@@ -324,9 +332,9 @@ span.middot {
 
 .nolineheight { line-height: 0 !important; }
 
-.font-body { font-family: 'Lato', sans-serif; }
+.font-body { font-family: din-regular, sans-serif; }
 
-.font-primary { font-family: 'Raleway', sans-serif; }
+.font-primary { font-family: din-regular, sans-serif; }
 
 .font-secondary { font-family: 'Crete Round', serif; }
 
@@ -433,7 +441,7 @@ span.middot {
 	position: relative;
 	margin: 60px 0;
 	padding: 60px 0;
-	background-color: #FFFDF2;
+	background-color: #e2e2e2;
 	overflow: hidden;
 }
 
@@ -898,8 +906,8 @@ html[xmlns] .slider-wrap {display: block;}
 
 #header {
 	position: relative;
-	background-color: #fffbdf;
-	border-bottom: 1px solid #fffbdf;
+	background-color: #ebdb8e;
+	border-bottom: 1px solid #ebdb8e;
 }
 
 #header .container { position: relative; }
@@ -968,7 +976,7 @@ body.stretched #header.full-header .container {
 #logo {
 	position: relative;
 	float: left;
-	font-family: 'Raleway', sans-serif;
+	font-family: din-regular, sans-serif;
 	font-size: 36px;
 	line-height: 100%;
 	margin-right: 40px;
@@ -1094,12 +1102,12 @@ body.stretched #header.full-header .container {
 	height: 100px;
 	line-height: 100px;
 	padding: 0 15px;
-	color: #555;
+	color: #021638;
 	font-weight: bold;
-	font-size: 13px;
+	font-size: 18px;
 	letter-spacing: 1px;
 	text-transform: uppercase;
-	font-family: 'Raleway', sans-serif;
+	font-family: din-regular, sans-serif;
 	-webkit-transition: height .4s ease, line-height .4s ease, margin .4s ease, padding .4s ease;
 	-o-transition: height .4s ease, line-height .4s ease, margin .4s ease, padding .4s ease;
 	transition: height .4s ease, line-height .4s ease, margin .4s ease, padding .4s ease;
@@ -1162,7 +1170,7 @@ body.stretched #header.full-header .container {
 #primary-menu ul ul li:first-child { border-top: 0; }
 
 #primary-menu ul ul a {
-	font-size: 12px;
+	font-size: 14px;
 	font-weight: 600;
 	height: auto !important;
 	line-height: 22px !important;
@@ -1171,7 +1179,7 @@ body.stretched #header.full-header .container {
 	padding-bottom: 10px !important;
 	border: 0 !important;
 	letter-spacing: 0;
-	font-family: 'Lato', sans-serif;
+	font-family: din-regular, sans-serif;
 	-webkit-transition: all .2s ease-in-out;
 	-o-transition: all .2s ease-in-out;
 	transition: all .2s ease-in-out;
@@ -1273,7 +1281,7 @@ body.stretched #header.full-header #primary-menu ul li.mega-menu .mega-menu-cont
 #primary-menu ul li .mega-menu-content.style-2 > ul > li.mega-menu-title > a {
 	font-size: 13px;
 	font-weight: bold;
-	font-family: 'Raleway', sans-serif;
+	font-family: din-regular, sans-serif;
 	letter-spacing: 1px;
 	text-transform: uppercase !important;
 	margin-bottom: 15px;
@@ -1733,7 +1741,7 @@ body.top-search-open #top-search form {
 	color: #333;
 	font-weight: 700;
 	margin-top: 0 !important;
-	font-family: 'Raleway', sans-serif;
+	font-family: din-regular, sans-serif;
 	letter-spacing: 2px;
 }
 
@@ -1968,7 +1976,7 @@ body.top-search-open #side-panel-trigger { opacity: 0; }
 	top: 0;
 	left: 0;
 	width: 100%;
-	background-color: #fffbdf;
+	background-color: #ebdb8e;
 	box-shadow: 0 0 10px rgba(0,0,0,0.1);
 	-webkit-backface-visibility: hidden;
 }
@@ -3175,9 +3183,9 @@ body.side-panel-open:not(.device-xxs):not(.device-xs):not(.device-sm) .body-over
 
 #page-title {
 	position: relative;
-	padding: 50px 0;
-	background-color: #FFFDF2;
-	border-bottom: 1px solid #FFFDF2;
+	padding: 10px 0;
+	background-color: #021638;
+	border-bottom: 1px solid #021638;
 }
 
 #page-title .container { position: relative; }
@@ -3188,8 +3196,8 @@ body.side-panel-open:not(.device-xxs):not(.device-xs):not(.device-sm) .body-over
 	line-height: 1;
 	font-weight: 600;
 	letter-spacing: 1px;
-	color: #555;
-	font-size: 28px;
+	color: #c1c0c0;
+	font-size: 18px;
 	text-transform: uppercase;
 }
 
@@ -3360,7 +3368,7 @@ body.stretched .container-fullwidth .breadcrumb { right: 60px !important; }
 #content {
 	position: relative;
 	overflow: hidden;
-	background-color: #fffbdf;
+	background-color: #e2e2e2;
 }
 
 #content p { line-height: 1.8; }
@@ -3376,6 +3384,11 @@ body.stretched .container-fullwidth .breadcrumb { right: 60px !important; }
 /* ----------------------------------------------------------------
 	Portfolio
 -----------------------------------------------------------------*/
+
+.fondoItems {
+	background-color: #fff;
+	height: auto;
+}
 
 
 /* Portfolio - Filter
@@ -5017,7 +5030,7 @@ body.device-touch.device-xxs .portfolio-notitle .portfolio-overlay { display: no
 	padding: 30px 0;
 	text-align: center;
 	color: #555;
-	font-family: 'Raleway', sans-serif;
+	font-family: din-regular, sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	font-size: 24px;
@@ -5277,7 +5290,7 @@ body:not(.device-touch) .entry-link {
 	font-weight: bold;
 	letter-spacing: 1px;
 	text-transform: uppercase;
-	font-family: 'Raleway', sans-serif;
+	font-family: din-regular, sans-serif;
 }
 
 .post-timeline .entry-timeline {
@@ -5799,7 +5812,7 @@ div.alignright {
 .wp-caption {
 	text-align: center;
 	margin: 10px 20px 13px 20px;
-	font-family: 'Lato', Georgia, "Times New Roman", Times, serif;
+	font-family: din-regular, Georgia, "Times New Roman", Times, serif;
 	font-style: italic;
 }
 
@@ -6699,7 +6712,7 @@ body:not(.device-touch) .button {
 	font-size: 22px;
 	height: auto;
 	line-height: 1;
-	font-family: 'Raleway', sans-serif;
+	font-family: din-regular, sans-serif;
 }
 
 .button.button-desc span {
@@ -7679,7 +7692,7 @@ body:not(.device-touch) .button.button-full strong {
 
 .feature-box.fbox-center.fbox-italic p {
 	font-style: italic;
-	font-family: 'Lato', sans-serif;
+	font-family: din-regular, sans-serif;
 }
 
 
@@ -8285,9 +8298,9 @@ body:not(.device-touch) .on-hover.i-overlay {
 	height: 40px;
 	font-size: 20px;
 	line-height: 38px !important;
-	color: #555;
+	color: #021638;
 	text-shadow: none;
-	border: 1px solid #555;
+	border: 1px solid #021638;
 	border-radius: 3px;
 	overflow: hidden;
 }
@@ -8308,7 +8321,7 @@ body:not(.device-touch) .on-hover.i-overlay {
 
 .si-dark {
 	background-color: #555;
-	color: #fffbdf !important;
+	color: #acc2cd !important;
 	border-color: transparent;
 }
 
@@ -9011,7 +9024,7 @@ ul.tab-nav-lg li {
 ul.tab-nav-lg li a {
 	display: inline-block;
 	color: #555;
-	font-family: 'Raleway', sans-serif;
+	font-family: din-regular, sans-serif;
 	font-size: 13px;
 	font-weight: bold;
 	text-transform: uppercase;
@@ -9603,7 +9616,7 @@ body:not(.device-touch) .clients-grid li a {
 
 .team-content {
 	margin-top: 15px;
-	color: #555;
+	color: #021638;
 }
 
 .team-content p:last-child { margin-bottom: 0; }
@@ -9947,7 +9960,7 @@ body:not(.device-touch) .team-overlay {
 .counter {
 	font-size: 42px;
 	font-weight: 600;
-	font-family: 'Raleway', sans-serif;
+	font-family: din-regular, sans-serif;
 }
 
 .counter.counter-small { font-size: 28px; }
@@ -10080,7 +10093,7 @@ body:not(.device-touch) .rounded-skill {
 
 .skills li .progress-percent .counter {
 	font-weight: 400;
-	font-family: 'Lato', sans-serif;
+	font-family: din-regular, sans-serif;
 }
 
 .progress-percent:after, .progress-percent:before {
@@ -10606,7 +10619,7 @@ label {
 	display: inline-block;
 	font-size: 13px;
 	font-weight: 700;
-	font-family: 'Raleway', sans-serif;
+	font-family: din-regular, sans-serif;
 	text-transform: uppercase;
 	letter-spacing: 1px;
 	color: #555;
@@ -10891,7 +10904,7 @@ label.error { display: none !important; }
 .fancy-title h6 {
 	position: relative;
 	display: inline-block;
-	background-color: #fffbdf;
+	background-color: #e2e2e2;
 	padding-right: 15px;
 	margin-bottom: 0;
 }
@@ -11550,7 +11563,7 @@ button.toast-close-button {
 
 #footer {
 	position: relative;
-	background-color: #ECE8B3;
+	background-color: #09183a;
 	border-top: 5px solid rgba(0,0,0,0.2);
 }
 
@@ -11597,9 +11610,29 @@ button.toast-close-button {
 .footer-widgets-wrap .col_one_sixth,
 .footer-widgets-wrap .col_five_sixth { margin-bottom: 0; }
 
+.footer-widgets-wrap h3,
+.footer-widgets-wrap h4,
+.footer-widgets-wrap .spost .entry-title h4 a,
+.footer-widgets-wrap .spost .entry-meta li,
+.footer-widgets-wrap .fa { color: #c1c0c0; }
+.footer-widgets-wrap p { color: #c1c0c0; }
+.footer-widgets-wrap .social-icon { color: #c1c0c0; border: 1px solid #c1c0c0; }
+
+#quick-contact-form .btn {
+	background-color: #427236;
+	color: #c1c0c0;
+	border: 0 none;
+	width: 80px;
+}
+
+#quick-contact-form .btn:hover {
+	background-color: #ebdb8e;
+	color: #021638;
+}
+
 #copyrights {
 	padding: 40px 0;
-	background-color: #fffbdf;
+	background-color: #ebdb8e;
 	font-size: 14px;
 	line-height: 1.8;
 }
@@ -11642,6 +11675,10 @@ button.toast-close-button {
 .footer-logo {
 	display: block;
 	margin-bottom: 30px;
+}
+
+.rights-footer {
+	color: fff;
 }
 
 
@@ -11937,7 +11974,7 @@ body:not(.device-touch) .tagcloud a {
 	font-size: 13px;
 	font-weight: 700;
 	letter-spacing: 2px;
-	font-family: 'Raleway', sans-serif;
+	font-family: din-regular, sans-serif;
 }
 
 .nav-tree li i {
@@ -11968,7 +12005,7 @@ body:not(.device-touch) .tagcloud a {
 	font-size: 12px;
 	padding: 6px 0;
 	letter-spacing: 1px;
-	font-family: 'Lato', sans-serif;
+	font-family: din-regular, sans-serif;
 }
 
 .nav-tree ul ul a i.icon-angle-down { font-size: 12px; }
@@ -11999,7 +12036,7 @@ body:not(.device-touch) .tagcloud a {
 	font-weight: bold;
 	text-align: right;
 	text-transform: uppercase;
-	font-family: 'Raleway', sans-serif;
+	font-family: din-regular, sans-serif;
 	letter-spacing: 2px;
 }
 
@@ -13772,8 +13809,8 @@ body:not(.no-transition) #wrapper,
 
 	#header.transparent-header,
 	#header.semi-transparent {
-		background: #fffbdf;
-		border-bottom: 1px solid #fffbdf;
+		background: #de;
+		border-bottom: 1px solid #acc2cd;
 		z-index: auto;
 	}
 

@@ -1,8 +1,8 @@
-<div class="container">
+
 
   <!-- Header
   ============================================= -->
-  <header id="header" class="">
+  <header id="header">
     <div id="header-wrap">
       <div class="container clearfix">
 
@@ -45,14 +45,14 @@
 
     <div class="swiper-container swiper-parent">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
+        <!-- <div class="swiper-slide">
           <div class="container clearfix">
             <div class="slider-caption slider-caption-center-center">
               <img class="animated fadeInUp" src="../../assets/images/logo/LOGO-LG.png" height="180" width="800"></img>
               <p class="animated fadeInUp">Automatizando al país del futuro.</p>
             </div>
-          </div>
-        </div>
+          </div> 
+        </div> -->
         <div class="swiper-slide" style="background: url('../../assets/images/slider/inasel2.png') center center; background-size:cover;">
           <div class="container clearfix">
             <!-- <div class="slider-caption slider-caption-center-center">
@@ -127,47 +127,52 @@
 
   </section><!-- #Slider end -->
 
+  
+
+  
+
   <section id="content">
     <div class="content-wrap nopadding">
 
       <div class="section nobottommargin">
         <div class="container clearfix">
 
-          <div class="heading-block-home center nobottomborder bottommargin-lg">
+          <div class="heading-block-home center nobottomborder">
             <h1>PROYECTOS ACTUALES</h1>
             <!-- <span>Estos son nuestros proyectos más recientes</span> -->
           </div>
-          <div class="clear"></div>
-            
           
-          <div id="portfolio" class="portfolio-4 topmargin-sm clearfix">
-            <article class="portfolio-item pf-media pf-icons animated fadeInLeft" ng-repeat="x in listaProyectos">
-              <div class="portfolio-image">
-                <a href="portfolio-single.html">
-                  <img src="{{x.img_path}}" alt="{{x.titulo}}" width="400px" height="300px">
-                </a>
-                <div class="portfolio-overlay">
-                  <a href="#/proyectos/{{x.idProyecto}}" class="center-icon" data-lightbox="image"><i class="fa fa-plus"></i></a>
-                  <!-- <a href="portfolio-single.html" class="right-icon"><i class="fa fa-ellipsis-h"></i></a> -->
+          <div class="fondoItems">
+            <div id="portfolio" class="portfolio-4 topmargin-sm clearfix">
+              <article class="portfolio-item pf-media pf-icons animated fadeInLeft" ng-repeat="x in listaProyectos">
+                <div class="portfolio-image">
+                  <a href="portfolio-single.html">
+                    <img src="{{x.img_path}}" alt="{{x.titulo}}" width="400px" height="300px">
+                  </a>
+                  <div class="portfolio-overlay">
+                    <a href="#/proyectos/{{x.idProyecto}}" class="center-icon" data-lightbox="image"><i class="fa fa-plus"></i></a>
+                    <!-- <a href="portfolio-single.html" class="right-icon"><i class="fa fa-ellipsis-h"></i></a> -->
+                  </div>
                 </div>
-              </div>
-              <div class="portfolio-desc">
-                <h3><a href="#/proyectos/{{x.idProyecto}}">{{x.titulo}}</a></h3>
-                <span><a href="#">{{x.categoria}}</a></span>
-              </div>
-            </article>
-            
+                <div class="portfolio-desc">
+                  <h3><a href="#/proyectos/{{x.idProyecto}}">{{x.titulo}}</a></h3>
+                  <span><a href="#">{{x.categoria}}</a></span>
+                </div>
+              </article>
+              
+            </div>
           </div>
         
         </div>
       </div>
     </div>
 
+    <div class="line"></div>
 
     <div class="section nobottommargin">
       <div class="container clearfix">
 
-        <div class="heading-block-home center nobottomborder bottommargin-lg">
+        <div class="heading-block-home center nobottomborder">
           <h1>PRODUCTOS QUE OFRECEMOS</h1>
           <!-- <span>Estos son nuestros proyectos más recientes</span> -->
         </div>
@@ -194,11 +199,12 @@
       </div>
     </div>
 
+    <div class="line"></div>
 
       <div class="section nobottommargin">
         <div class="container clearfix">
 
-          <div class="heading-block-home center nobottomborder bottommargin-lg">
+          <div class="heading-block-home center nobottomborder">
             <h1>NUESTRAS REPRESENTACIONES</h1>
             <!-- <span>Estos son nuestros proyectos más recientes</span> -->
           </div>
@@ -222,7 +228,6 @@
     </div>
   </section>
 
-</div>
 <!-- Footer
 ============================================= -->
 <footer id="footer" class="topmargin-sm">
@@ -241,7 +246,7 @@
 
                         <img src="../../../assets/images/logo/LOGO2-FOOTER.png" alt="" class="footer-logo">
 
-                        <h3><strong>Automatizando</strong> al país del futuro.</h3>
+                        <h3>"<strong>Automatizando</strong> al país del futuro"</h3>
 
                         <div class="clearfix" style="padding: 10px 0;">
                             <div class="col-md-12">
@@ -249,8 +254,8 @@
                                     <i class="fa fa-map-marker fa-lg fa-fw"></i>
                                     Jorge Juan N32-24 y Mariana de Jesús<br>
                                 </address>
-                                <i class="fa fa-phone-square fa-lg fa-fw"></i> (593) 22504423<br>
-                                <i class="fa fa-envelope fa-lg fa-fw"></i> inasel@inaselecuador.com
+                                <i class="fa fa-phone-square fa-lg fa-fw"></i> <p>(593) 22504423</p><br>
+                                <i class="fa fa-envelope fa-lg fa-fw"></i> <p>inasel@inaselecuador.com</p>
                             </div>
                         </div>
 
@@ -328,7 +333,7 @@
                                 <input type="text" class="hidden" id="quick-contact-form-botcheck" name="quick-contact-form-botcheck" value="" />
 
                           
-                                <button type="submit" id="quick-contact-form-submit" name="quick-contact-form-submit" class="btn btn-danger nomargin" value="submit">OK</button>
+                                <button type="submit" id="quick-contact-form-submit" name="quick-contact-form-submit" class="btn nomargin" value="submit">OK</button>
                                 
                                 
 
@@ -355,7 +360,7 @@
                 <div class="copyrights-menu copyright-links clearfix">
                     <a href="#/">Inicio</a>/<a href="#/empresa">Empresa</a>/<a href="#/proyectos">Proyectos</a>/<a href="#/servicios">Servicios</a>/<a href="#/productos">Productos</a>/<a href="#/noticias">Noticias</a>/<a href="#/contacto">Contacto</a>
                 </div>
-                Todos los derechos reservados &copy; 2015 All Rights Reserved by GuaytamboSoft.
+                <p class="rights-footer">Todos los derechos reservados &copy; 2015 All Rights Reserved by GuaytamboSoft.</p>
             </div>
 
         </div>
