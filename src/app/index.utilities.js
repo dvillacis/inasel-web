@@ -431,6 +431,9 @@ var SEMICOLON = SEMICOLON || {};
 		},
 
 		logo: function(){
+			defaultLogo = angular.element('#logo').find('.standard-logo');
+			defaultLogoImg = defaultLogo.attr('data-dark-logo');
+			defaultStickyLogo = defaultLogo.attr('data-sticky-logo');
 			if( ( angular.element('#header').hasClass('dark') || ng_body.hasClass('dark') ) && !angular.element('#header-wrap').hasClass('not-dark') ) {
 				if( defaultDarkLogo ){ defaultLogo.find('img').attr('src', defaultDarkLogo); }
 				if( retinaDarkLogo ){ retinaLogo.find('img').attr('src', retinaDarkLogo); }
