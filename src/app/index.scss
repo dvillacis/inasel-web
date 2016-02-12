@@ -135,7 +135,7 @@ fieldset,
 form { margin-bottom: 30px; }
 
 address {
-	color: #c1c0c0;
+	color: #021638;
 }
 
 small { font-family: din-regular, sans-serif; }
@@ -3387,7 +3387,12 @@ body.stretched .container-fullwidth .breadcrumb { right: 60px !important; }
 
 .fondoItems {
 	background-color: #fff;
+	border-radius: 25px;
 	height: auto;
+}
+
+.fondoItems .portfolio {
+	padding-top: 40px;
 }
 
 

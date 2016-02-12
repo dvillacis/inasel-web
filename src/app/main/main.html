@@ -45,83 +45,16 @@
 
     <div class="swiper-container swiper-parent">
       <div class="swiper-wrapper">
-        <!-- <div class="swiper-slide">
-          <div class="container clearfix">
-            <div class="slider-caption slider-caption-center-center">
-              <img class="animated fadeInUp" src="../../assets/images/logo/LOGO-LG.png" height="180" width="800"></img>
-              <p class="animated fadeInUp">Automatizando al país del futuro.</p>
-            </div>
-          </div> 
-        </div> -->
-        <div class="swiper-slide" style="background: url('../../assets/images/slider/inasel2.png') center center; background-size:cover;">
-          <div class="container clearfix">
-            <!-- <div class="slider-caption slider-caption-center-center">
-              <h2 class="animated fadeInUp">Titulo</h2>
-              <p class="animated fadeInUp">Descripción del slide.</p>
-            </div> -->
-          </div>
-          <!-- <div class="video-wrap">
-            <video poster="images/videos/explore.jpg" preload="auto" loop autoplay muted>
-              <source src='images/videos/explore.mp4' type='video/mp4' />
-              <source src='images/videos/explore.webm' type='video/webm' />
-            </video>
-            <div class="video-overlay" style="background-color: rgba(0,0,0,0.55);"></div>
-          </div> -->
-        </div>
-        <div class="swiper-slide" style="background: url('../../assets/images/slider/inasel3.png') center center; background-size:cover;">
-          <div class="container clearfix">
-            <!-- <div class="slider-caption">
-              <h2 data-caption-animate="fadeInUp">Great Performance</h2>
-              <p data-caption-animate="fadeInUp" data-caption-delay="200">You'll be surprised to see the Final Results of your Creation &amp; would crave for more.</p>
-            </div> -->
-          </div>
-        </div>
-        <div class="swiper-slide" style="background: url('../../assets/images/slider/inasel4.png') center center; background-size:cover;">
-          <div class="container clearfix">
-            <!-- <div class="slider-caption">
-              <h2 data-caption-animate="fadeInUp">Great Performance</h2>
-              <p data-caption-animate="fadeInUp" data-caption-delay="200">You'll be surprised to see the Final Results of your Creation &amp; would crave for more.</p>
-            </div> -->
-          </div>
-        </div>
-        <div class="swiper-slide" style="background: url('../../assets/images/slider/inasel5.png') center center; background-size:cover;">
-          <div class="container clearfix">
-            <!-- <div class="slider-caption">
-              <h2 data-caption-animate="fadeInUp">Great Performance</h2>
-              <p data-caption-animate="fadeInUp" data-caption-delay="200">You'll be surprised to see the Final Results of your Creation &amp; would crave for more.</p>
-            </div> -->
-          </div>
-        </div>
-        <div class="swiper-slide" style="background: url('../../assets/images/slider/inasel6.png') center center; background-size:cover;">
-          <div class="container clearfix">
-            <!-- <div class="slider-caption">
-              <h2 data-caption-animate="fadeInUp">Great Performance</h2>
-              <p data-caption-animate="fadeInUp" data-caption-delay="200">You'll be surprised to see the Final Results of your Creation &amp; would crave for more.</p>
-            </div> -->
-          </div>
-        </div>
-        <div class="swiper-slide" style="background: url('../../assets/images/slider/inasel7.png') center center; background-size:cover;">
-          <div class="container clearfix">
-            <!-- <div class="slider-caption">
-              <h2 data-caption-animate="fadeInUp">Great Performance</h2>
-              <p data-caption-animate="fadeInUp" data-caption-delay="200">You'll be surprised to see the Final Results of your Creation &amp; would crave for more.</p>
-            </div> -->
-          </div>
-        </div>
-        <div class="swiper-slide" style="background: url('../../assets/images/slider/inasel1.png') center center; background-size:cover;">
-          <div class="container clearfix">
-            <!-- <div class="slider-caption">
-              <h2 data-caption-animate="fadeInUp">Great Performance</h2>
-              <p data-caption-animate="fadeInUp" data-caption-delay="200">You'll be surprised to see the Final Results of your Creation &amp; would crave for more.</p>
-            </div> -->
-          </div>
-        </div>
-       <!--  <div class="swiper-slide" ng-repeat="item in lista" end-repeat>
-          <p>{{item.id}}</p>
-        </div> -->
+        <div class="swiper-slide" style="background: url('../../assets/images/slider/inasel1.png') center center; background-size:cover;"></div>
+        <div class="swiper-slide" style="background: url('../../assets/images/slider/inasel2.png') center center; background-size:cover;"></div>
+        <div class="swiper-slide" style="background: url('../../assets/images/slider/inasel3.png') center center; background-size:cover;"></div>
+        <div class="swiper-slide" style="background: url('../../assets/images/slider/inasel4.png') center center; background-size:cover;"></div>
+        <div class="swiper-slide" style="background: url('../../assets/images/slider/inasel5.png') center center; background-size:cover;"></div>
+        <div class="swiper-slide" style="background: url('../../assets/images/slider/inasel6.png') center center; background-size:cover;"></div>
+        <div class="swiper-slide" style="background: url('../../assets/images/slider/inasel7.png') center center; background-size:cover;"></div>
       </div>
-      <div id="slider-arrow-left"><i class="fa fa-angle-left"></i></div>
-      <div id="slider-arrow-right"><i class="fa fa-angle-right"></i></div>
+      <div id="slider-arrow-left" class="swiper-button-prev"></div>
+      <div id="slider-arrow-right" class="swiper-button-next"></div>
       <div id="slide-number"><div id="slide-number-current"></div><span>/</span><div id="slide-number-total"></div></div>
     </div>
 
@@ -143,7 +76,7 @@
           </div>
           
           <div class="fondoItems">
-            <div id="portfolio" class="portfolio-4 topmargin-sm clearfix">
+            <div id="portfolio" class="portfolio-4 topmargin-sm clearfix" style="padding-top: 40px;">
               <article class="portfolio-item pf-media pf-icons animated fadeInLeft" ng-repeat="x in listaProyectos">
                 <div class="portfolio-image">
                   <a href="portfolio-single.html">
@@ -161,6 +94,13 @@
               </article>
               
             </div>
+          
+            <div align="right" style="padding-right: 25px;">
+              <button type="button" class="alert alert-success animated rollIn">
+                <span><a href="#/proyectos">Ver Más</a></span>
+              </button>
+            </div>
+
           </div>
         
         </div>
@@ -177,24 +117,31 @@
           <!-- <span>Estos son nuestros proyectos más recientes</span> -->
         </div>
         <div class="clear"></div>
-        <div id="portfolio" class="portfolio-4 topmargin-sm clearfix">
+        <div class="fondoItems">
+          <div id="portfolio" class="portfolio-4 topmargin-sm clearfix" style="padding-top: 40px;">
 
-          <article class="portfolio-item pf-media pf-icons animated fadeInLeft" ng-repeat="x in listaProductos">
-            <div class="portfolio-image">
-              <a href="portfolio-single.html">
-                <img src="{{x.img_path}}" alt="{{x.titulo}}">
-              </a>
-              <div class="portfolio-overlay">
-                <a href="#/productos/{{x.idProducto}}" class="center-icon" data-lightbox="image"><i class="fa fa-plus"></i></a>
-                <!-- <a href="portfolio-single.html" class="right-icon"><i class="fa fa-ellipsis-h"></i></a> -->
+            <article class="portfolio-item pf-media pf-icons animated fadeInLeft" ng-repeat="x in listaProductos">
+              <div class="portfolio-image">
+                <a href="portfolio-single.html">
+                  <img src="{{x.img_path}}" alt="{{x.titulo}}">
+                </a>
+                <div class="portfolio-overlay">
+                  <a href="#/productos/{{x.idProducto}}" class="center-icon" data-lightbox="image"><i class="fa fa-plus"></i></a>
+                  <!-- <a href="portfolio-single.html" class="right-icon"><i class="fa fa-ellipsis-h"></i></a> -->
+                </div>
               </div>
-            </div>
-            <div class="portfolio-desc">
-              <h3><a href="#/productos/{{x.idProducto}}">{{x.titulo}}</a></h3>
-              <span><a href="#">{{x.categoria}}</a></span>
-            </div>
-          </article>
+              <div class="portfolio-desc">
+                <h3><a href="#/productos/{{x.idProducto}}">{{x.titulo}}</a></h3>
+                <span><a href="#">{{x.categoria}}</a></span>
+              </div>
+            </article>
 
+          </div>
+          <div align="right" style="padding-right: 25px;">
+            <button type="button" class="alert alert-success animated rollIn">
+              <span><a href="#/productos">Ver Más</a></span>
+            </button>
+          </div>
         </div>
       </div>
     </div>

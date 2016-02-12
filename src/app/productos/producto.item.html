@@ -79,7 +79,7 @@
 					<div class="fancy-title title-bottom-border">
 						<h2>Información del Producto:</h2>
 					</div>
-                    <div ng-bind-html="producto.descripcion_larga"></div>
+                    <div ng-bind-html="producto.descripcion_corta"></div>
 					<!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis, dolores, facere, corrupti delectus ex quidem adipisci tempore.</p>
 					<p>Illum molestias cupiditate eveniet dolore obcaecati voluptatibus est quos eos id recusandae officia. Cupiditate, voluptates quibusdam ipsum vel corporis laboriosam id est doloremque?</p> -->
 					<!-- Portfolio Single - Description End -->
@@ -118,6 +118,12 @@
 				</div><!-- .portfolio-single-content end -->
 
 			</div>
+
+      <div class="line"></div>
+
+      <div class="nobottommargin topmargin">
+          <div ng-bind-html="producto.descripcion_larga"></div>  
+      </div>
 
 		</div>
 

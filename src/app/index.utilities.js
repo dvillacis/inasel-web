@@ -165,70 +165,32 @@ var SEMICOLON = SEMICOLON || {};
 		},
 
 		initSwiper: function() {
-
-			var swiperSlider = new Swiper('.swiper-parent', {
-				paginationClickable: false,
-				slidesPerView: 1,
-				grabCursor: true
+			var swiperSlider = new Swiper('.swiper-container', {
+				speed: 400,
+				autoplay: 5000,
+				autoplayDisableOnInteraction: true,
+				// Navigation arrows
+			    nextButton: '.swiper-button-next',
+			    prevButton: '.swiper-button-prev',
 			});
 
 			angular.element('#slider-arrow-left').on('click', function(e){
-				e.preventDefault();
-				swiperSlider.slidePrev();
+				//e.preventDefault();
+				//swiperSlider.slidePrev();
+				angular.element('#slide-number-current').html(swiperSlider.activeIndex + 1);
+				angular.element('#slide-number-total').html(swiperSlider.slides.length);
 			});
 
 			angular.element('#slider-arrow-right').on('click', function(e){
-				e.preventDefault();
-				swiperSlider.slideNext();
+				//e.preventDefault();
+				//swiperSlider.slideNext();
+				angular.element('#slide-number-current').html(swiperSlider.activeIndex + 1);
+				angular.element('#slide-number-total').html(swiperSlider.slides.length);
 			});
 
 			angular.element('#slide-number-current').html(swiperSlider.activeIndex + 1);
 			angular.element('#slide-number-total').html(swiperSlider.slides.length);
 		}
-
-		// sliderParallaxOffset: function(){
-		// 	var sliderParallaxOffsetTop = 0;
-		// 	var headerHeight = $header.outerHeight();
-		// 	if( ng_body.hasClass('side-header') || $header.hasClass('transparent-header') ) { headerHeight = 0; }
-		// 	if( $pageTitle.length > 0 ) {
-		// 		var pageTitleHeight = $pageTitle.outerHeight();
-		// 		sliderParallaxOffsetTop = pageTitleHeight + headerHeight;
-		// 	} else {
-		// 		sliderParallaxOffsetTop = headerHeight;
-		// 	}
-
-		// 	if( ng_slider.next('#header').length > 0 ) { sliderParallaxOffsetTop = 0; }
-
-		// 	return sliderParallaxOffsetTop;
-		// },
-
-		// sliderParallax: function(){
-		// 	if( ng_sliderParallaxEl.length > 0 ) {
-		// 		if( ( ng_body.hasClass('device-lg') || ng_body.hasClass('device-md') ) && !SEMICOLON.isMobile.any() ) {
-		// 			var parallaxOffsetTop = SEMICOLON.slider.sliderParallaxOffset(),
-		// 				parallaxElHeight = ng_sliderParallaxEl.outerHeight();
-
-		// 			if( ( parallaxElHeight + parallaxOffsetTop + 50 ) > ng_window.scrollTop() ){
-		// 				if (ng_window.scrollTop() > parallaxOffsetTop) {
-		// 					var tranformAmount = ((ng_window.scrollTop()-parallaxOffsetTop) / 1.5 ).toFixed(2);
-		// 					var tranformAmount2 = ((ng_window.scrollTop()-parallaxOffsetTop) / 7 ).toFixed(2);
-		// 					ng_sliderParallaxEl.stop(true,true).transition({ y: tranformAmount },0);
-		// 					angular.element('.slider-parallax .slider-caption,.ei-title').stop(true,true).transition({ y: -tranformAmount2 },0);
-		// 				} else {
-		// 					angular.element('.slider-parallax,.slider-parallax .slider-caption,.ei-title').transition({ y: 0 },0);
-		// 				}
-		// 			}
-		// 			if (requesting) {
-		// 				requestAnimationFrame(function(){
-		// 					SEMICOLON.slider.sliderParallax();
-		// 					SEMICOLON.slider.sliderElementsFade();
-		// 				});
-		// 			}
-		// 		} else {
-		// 			angular.element('.slider-parallax,.slider-parallax .slider-caption,.ei-title').transition({ y: 0 },0);
-		// 		}
-		// 	}
-		// }
 
 	};
 
@@ -256,12 +218,6 @@ var SEMICOLON = SEMICOLON || {};
 
 				return false;
 			});
-
-			// angular.element('#portfolio-shuffle').click(function(){
-			// 	ng_container.isotope('updateSortData').isotope({
-			// 		sortBy: 'random'
-			// 	});
-			// });
 
 			angular.element(window).resize(function() {
 				ng_container.isotope('layout');
