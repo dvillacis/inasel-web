@@ -63,9 +63,9 @@
         <marker position="[-0.1869, -78.4928]" draggable="false"></marker>
       </ng-map>
     </section>
-    
+
   </div>
-  
+
 
   <!-- Content
   ============================================= -->
@@ -81,59 +81,46 @@
 
           <h3>Envíanos un Mensaje</h3>
 
-          <div id="contact-form-result" data-notify-type="success" data-notify-msg="<i class=icon-ok-sign></i> Message Sent Successfully!"></div>
+          <form class="nobottommargin" name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
 
-          <form class="nobottommargin" id="template-contactform" name="template-contactform" action="include/sendemail.php" method="post">
-
-            <div class="form-process"></div>
-
-            <div class="col_one_third">
-              <label for="template-contactform-name">Nombre <small>*</small></label>
-              <input type="text" id="template-contactform-name" name="template-contactform-name" value="" class="sm-form-control required" />
+            <div class="col_one_third form-group">
+              <label>Nombre <small>*</small></label>
+              <input type="text" name="fname" value="" class="form-control" ng-model="mensaje.nombre" required />
+              <p ng-show="userForm.fname.$invalid && !userForm.name.$pristine" class="help-block">Nombre incorrecto.</p>
             </div>
 
-            <div class="col_one_third">
-              <label for="template-contactform-email">Email <small>*</small></label>
-              <input type="email" id="template-contactform-email" name="template-contactform-email" value="" class="required email sm-form-control" />
+            <div class="col_one_third form-group">
+              <label>Email <small>*</small></label>
+              <input type="email" name="femail" value="" class="email form-control" ng-model="mensaje.email" required />
+              <p ng-show="userForm.femail.$invalid && !userForm.femail.$pristine" class="help-block">Email incorrecto.</p>
             </div>
 
-            <div class="col_one_third col_last">
-              <label for="template-contactform-phone">Teléfono</label>
-              <input type="text" id="template-contactform-phone" name="template-contactform-phone" value="" class="sm-form-control" />
+            <div class="col_one_third col_last form-group">
+              <label>Teléfono</label>
+              <input type="text" name="ftelefono" value="" class="form-control" ng-model="mensaje.telefono" required/>
+              <p ng-show="userForm.ftelefono.$invalid && !userForm.ftelefono.$pristine" class="help-block">Telefono incorrecto.</p>
             </div>
 
             <div class="clear"></div>
 
-            <div class="col_two_third">
-              <label for="template-contactform-subject">TITULO <small>*</small></label>
-              <input type="text" id="template-contactform-subject" name="template-contactform-subject" value="" class="required sm-form-control" />
+            <div class="col_two_third form-group">
+              <label>TITULO <small>*</small></label>
+              <input type="text" name="ftitulo" value="" class="form-control" ng-model="mensaje.titulo" required />
+              <p ng-show="userForm.ftitulo.$invalid && !userForm.ftitulo.$pristine" class="help-block">Titulo incorrecto.</p>
             </div>
-
-            <!-- <div class="col_one_third col_last">
-              <label for="template-contactform-service">Servicios</label>
-              <select id="template-contactform-service" name="template-contactform-service" class="sm-form-control">
-                <option value="">-- Seleccione Uno --</option>
-                <option value="Wordpress">Servicio 1</option>
-                <option value="PHP / MySQL">Servicio 2</option>
-                <option value="HTML5 / CSS3">Servicio 3</option>
-                <option value="Graphic Design">Servicio 4</option>
-              </select>
-            </div> -->
 
             <div class="clear"></div>
 
-            <div class="col_full">
-              <label for="template-contactform-message">Mensaje <small>*</small></label>
-              <textarea class="required sm-form-control" id="template-contactform-message" name="template-contactform-message" rows="6" cols="30"></textarea>
+            <div class="col_full form-group">
+              <label>Mensaje <small>*</small></label>
+              <textarea class="form-control" name="fmensaje" rows="6" cols="30" ng-model="mensaje.msg" required></textarea>
+              <p ng-show="userForm.fmensaje.$invalid && !userForm.fmensaje.$pristine" class="help-block">Mensaje incorrecto.</p>
             </div>
 
-            <div class="col_full hidden">
-              <input type="text" id="template-contactform-botcheck" name="template-contactform-botcheck" value="" class="sm-form-control" />
-            </div>
 
-            <div class="col_full">
-              <button class="button button-3d nomargin" type="submit" id="template-contactform-submit" name="template-contactform-submit" value="submit">ENVIAR MENSAJE</button>
-            </div>
+            <h5 id="envioExitoso" class="form-control hidden">Mensaje Enviado Exitosamente</h5>
+
+            <button id="enviarBtn" class="button button-3d btn-primary nomargin" type="submit" ng-disabled="userForm.$invalid">ENVIAR MENSAJE</button>
 
           </form>
 

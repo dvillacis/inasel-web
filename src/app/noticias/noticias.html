@@ -66,7 +66,7 @@
 
                   <div class="entry clearfix animated fadeInUp" ng-repeat="noticia in noticias">
                       <div class="entry-image">
-                          <iframe src="{{trustSrc(noticia.img_path)}}" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>     
+                          <iframe src="{{trustSrc(noticia.img_path)}}" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
                       </div>
                       <div class="entry-c">
                           <div class="entry-title">
@@ -80,7 +80,7 @@
                               <li><a href="#"><i class="icon-camera-retro"></i></a></li> -->
                           </ul>
                           <div class="entry-content">
-                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate, asperiores quod est tenetur in. Eligendi, deserunt, blanditiis est quisquam doloribus voluptate id aperiam ea ipsum magni aut perspiciatis rem voluptatibus officia eos rerum deleniti quae nihil facilis repellat atque vitae voluptatem libero at eveniet veritatis ab facere.</p>
+                              <p align="justify">{{noticia.contenido}}</p>
                           </div>
                       </div>
                   </div>
@@ -105,7 +105,7 @@
         <div class="footer-widgets-wrap clearfix">
 
             <div class="row">
-                
+
                 <div class="col-md-5">
 
                     <div class="widget clearfix">
@@ -125,7 +125,7 @@
                                 <div class="row">
                                   <div class="col-md-1"><i class="fa fa-envelope fa-lg fa-fw"></i></div><div class="col-md-8"><p>inasel@inaselecuador.com</p></div>
                                 </div>
-                                
+
                             </div>
                         </div>
 
@@ -185,7 +185,7 @@
                                 <i class="fa fa-android"></i>
                             </a>
                         </div>
-                      
+
 
                     </div>
 
@@ -212,10 +212,10 @@
                                 <textarea class="required form-control input-block-level short-textarea" id="quick-contact-form-message" name="quick-contact-form-message" rows="4" cols="30" placeholder="Aprende acerca de nuestras mejoras prácticas, nuevas soluciones y ofertas"></textarea>
                                 <input type="text" class="hidden" id="quick-contact-form-botcheck" name="quick-contact-form-botcheck" value="" />
 
-                          
+
                                 <button type="submit" id="quick-contact-form-submit" name="quick-contact-form-submit" class="btn nomargin" value="submit">OK</button>
-                                
-                                
+
+
 
                             </form>
 

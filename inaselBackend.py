@@ -140,7 +140,7 @@ class InaselBackend(remote.Service):
         img_path=messages.StringField(7,variant=messages.Variant.STRING),
         categoria=messages.StringField(8,variant=messages.Variant.STRING),
         fecha_publicacion=messages.StringField(9,variant=messages.Variant.STRING))
- 
+
     #guardar un producto
     @endpoints.method(PRODUCTO_RESOURCE, ProductoCollectionResponse,
         path='guardarProducto', http_method='POST', name='inaselbackend.guardarProducto')
@@ -197,7 +197,7 @@ class InaselBackend(remote.Service):
         descripcion_larga=messages.StringField(10,variant=messages.Variant.STRING),
         categoria=messages.StringField(11,variant=messages.Variant.STRING),
         fecha=messages.StringField(12,variant=messages.Variant.STRING))
- 
+
     #guardar un proyecto
     @endpoints.method(PROYECTO_RESOURCE, ProyectoCollectionResponse,
         path='guardarProyecto', http_method='POST', name='inaselbackend.guardarProyecto')
@@ -246,7 +246,7 @@ class InaselBackend(remote.Service):
         img_path=messages.StringField(3,variant=messages.Variant.STRING),
         contenido=messages.StringField(4,variant=messages.Variant.STRING),
         enlace=messages.StringField(5,variant=messages.Variant.STRING))
- 
+
     #guardar una noticia
     @endpoints.method(NOTICIA_RESOURCE, NoticiaCollectionResponse,
         path='guardarNoticia', http_method='POST', name='inaselbackend.guardarNoticia')
@@ -272,18 +272,25 @@ class InaselBackend(remote.Service):
         email=messages.StringField(4,variant=messages.Variant.STRING),
         telefono=messages.StringField(5,variant=messages.Variant.STRING),
         mensaje=messages.StringField(6,variant=messages.Variant.STRING))
+
     @endpoints.method(CONTACT_REQUEST_RESOURCE, MensajeResponse,
         path='enviarMensaje', http_method='POST', name='inaselbackend.enviarMensaje')
     def inaselbackend_enviarMensaje(self,request):
-        fecha = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         if not mail.is_email_valid(request.email):
             response = MensajeResponse(resultado='Envio Incorrecto')
-            
+
         else:
+            print 'Sending message'
+            sender_address = 'inasel@inaselecuador.com'
+            user_address = ['inasel@inaselecuador.com',request.email]
+            subject = 'INFORMACION DE CONTACTO WEB'
+            body = 'El usuario ' + request.nombre + ' - ' + request.email  + \
+                   ' ha enviado el siguiente mensaje: \n' + request.mensaje
+            mail.send_mail(sender_address, user_address, subject, body)
             response = MensajeResponse(resultado='Envio Correcto')
 
         return response
-        
-        
+
+
 
 APPLICATION = endpoints.api_server([InaselBackend])

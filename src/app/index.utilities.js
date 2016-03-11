@@ -36,6 +36,7 @@ var SEMICOLON = SEMICOLON || {};
 	SEMICOLON.initialize = {
 		init: function() {
 			SEMICOLON.initialize.responsiveClasses();
+      SEMICOLON.initialize.analytics();
 		},
 
 		responsiveClasses: function() {
@@ -154,13 +155,56 @@ var SEMICOLON = SEMICOLON || {};
 					}, 1000 );
 				}
 			}
-		}
+		},
+
+    maxHeight: function(){
+      var ng_commonHeightEl = angular.element('.common-height');
+			if( ng_commonHeightEl.length > 0 ) {
+          ng_commonHeightEl.each( function(){
+					var element = $(this);
+					if( element.has('.common-height') ) {
+						SEMICOLON.initialize.commonHeight( element.find('.common-height') );
+					}
+
+					SEMICOLON.initialize.commonHeight( element );
+				});
+			}
+		},
+
+		commonHeight: function( element ){
+			var maxHeight = 0;
+			element.children('[class^=col-]').each(function() {
+				var element = $(this).children('div');
+				if( element.hasClass('max-height') ){
+					maxHeight = element.outerHeight();
+				} else {
+					if (element.outerHeight() > maxHeight)
+					maxHeight = element.outerHeight();
+				}
+			});
+
+			element.children('[class^=col-]').each(function() {
+				$(this).height(maxHeight);
+			});
+		},
+
+    analytics: function(){
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-74959462-1', 'auto');
+      ga('send', 'pageview');
+
+    }
+
 	};
 
 	SEMICOLON.slider = {
 
 		init: function() {
-			SEMICOLON.slider.initSwiper();	
+			SEMICOLON.slider.initSwiper();
 
 		},
 
@@ -204,7 +248,7 @@ var SEMICOLON = SEMICOLON || {};
 			var ng_container = angular.element('#portfolio');
 
 			ng_container.isotope({
-				transitionDuration: '0.65s' 
+				transitionDuration: '0.65s'
 
 			});
 
@@ -212,7 +256,7 @@ var SEMICOLON = SEMICOLON || {};
 				angular.element('#portfolio-filter li').removeClass('activeFilter');
 				angular.element(this).parent('li').addClass('activeFilter');
 				var selector = angular.element(this).attr('data-filter');
-				console.log('Filtering: ' + selector);	
+				console.log('Filtering: ' + selector);
 				ng_container.isotope({ filter: selector });
 				console.log(ng_container.isotope);
 
@@ -537,7 +581,8 @@ var SEMICOLON = SEMICOLON || {};
 			var t = setTimeout( function() {
 
 				SEMICOLON.portfolio.arrange();
-			
+        SEMICOLON.initialize.maxHeight();
+
 			}, 500 );
 		}
 	};
@@ -554,7 +599,7 @@ var SEMICOLON = SEMICOLON || {};
 		},
 
 		windowScroll: function() {
-			
+
 			var headerOffset = 0;
 			var headerWrapOffset = 0;
 
