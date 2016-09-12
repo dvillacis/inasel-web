@@ -4,7 +4,7 @@
   angular
     .module('testAngular')
     .run(['GApi', 'GAuth', function(GApi, GAuth) {
-    	var BASE = 'https://inasel-beta.appspot.com/_ah/api';
+    	var BASE = 'https://inasel-web.appspot.com/_ah/api';
         GApi.load('inaselBackend','v2',BASE);
     }]);
 

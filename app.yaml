@@ -8,7 +8,10 @@ skip_files:
 - src/.*
 - node_modules/.*
 - bower_components/.*
-# - ^(.*/)?.*\.py[co]$
+- .git/.*
+- .tmp/.*
+- test/.*
+- ^(.*/)?.*\.py[co]$
 
 handlers:
 
